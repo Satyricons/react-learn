@@ -5,7 +5,5 @@
     background: aqua;
     align-items: center;
     grid-template-columns: 100px auto auto auto;
-    grid-template-rows: 120px;
-    line-height: 10px;
 }
 
