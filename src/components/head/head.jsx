@@ -1,8 +1,8 @@
 import headcss from './head.module.css';
-import logo from './logo.png';
+import logo from './img/logo.png';
 
 
-const Head = () => {
+const Head = (props) => {
     return (
        <div className={headcss.allhead}>
 
@@ -13,7 +13,10 @@ const Head = () => {
            </div>
            <div><a>225320 г.Барановичи, ул. Куйбышева, 46</a>
                <p>тел. +375 16 342-13-13</p></div>
-           <div>CABINET</div>
+           <div>
+               CABINET
+               <p>{props.id}</p>
+           </div>
 
 
        </div>
