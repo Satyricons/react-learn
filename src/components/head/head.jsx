@@ -8,7 +8,7 @@ const Head = (props) => {
 
            <div>
                <NavLink to="/body">
-               <img src={logo} />
+               <img src={logo}  alt="img"/>
                </NavLink>
             </div>
 
