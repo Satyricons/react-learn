@@ -4,8 +4,7 @@
     background: aqua;
     align-items: center;
     grid-template-columns: 100px auto auto auto;
-    line-height: 0.7em;
-
+    grid-template-rows: auto;
 }
 
 .item2 {
@@ -14,9 +13,31 @@
 
 .item21 {
     font-size: 25pt;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.item22{
+    letter-spacing: 0.11em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.item3 {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .item4 {
     text-decoration: none;
-    color: #46adc4;
+    color: #b0b0b0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.item41{
+    }
+
+.item42{
+    margin-top: auto;
+    margin-bottom: auto;
 }

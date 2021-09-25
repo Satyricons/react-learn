@@ -16,18 +16,18 @@ const Head = (props) => {
            <div>
                <a className={headcss.item2} href="/body" >
                <p className={headcss.item21}><b>Эндокринология для всех</b></p>
-               <p>Барановичская детская городская поликлиника</p>
+               <p className={headcss.item22}>Барановичская детская городская поликлиника</p>
            </a>
            </div>
 
-           <div >
-               <p>225320 г.Барановичи, ул. Куйбышева, 46</p>
-               <p>тел. +375 16 342-13-13</p>
+           <div>
+               <p className={headcss.item3}>225320 г.Барановичи, ул. Куйбышева, 46</p>
+               <p className={headcss.item3}>тел. +375 16 342-13-13</p>
            </div>
 
            <div >
                <a className={headcss.item4} href="/sidebar">Войти</a>
-               <p>{props.id}</p>
+               <p className={headcss.item42}>{props.id}</p>
            </div>
 
 
