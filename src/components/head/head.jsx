@@ -1,23 +1,22 @@
 import headcss from './head.module.css';
 import logo from './img/logo.png';
-import {BrowserRouter} from "react-router-dom";
-
+import {NavLink} from "react-router-dom";
 
 const Head = (props) => {
     return (
-        <BrowserRouter><div className={headcss.allhead}>
+        <div className={headcss.allhead}>
 
            <div>
-               <a href="/body">
+               <NavLink to="/body">
                <img src={logo} />
-               </a>
+               </NavLink>
             </div>
 
            <div>
-               <a className={headcss.item2} href="/body" >
+               <NavLink className={headcss.item2} to="/body" >
                <p className={headcss.item21}><b>Эндокринология для всех</b></p>
                <p className={headcss.item22}>Барановичская детская городская поликлиника</p>
-           </a>
+           </NavLink>
            </div>
 
            <div>
@@ -26,12 +25,11 @@ const Head = (props) => {
            </div>
 
            <div >
-               <a className={headcss.item4} href="/sidebar">Войти</a>
+               <NavLink className={headcss.item4} activeClassName={headcss.item4active} to="/sidebar">Войти</NavLink>
                <p className={headcss.item42}>{props.id}</p>
            </div>
 
-
-       </div></BrowserRouter>
+       </div>
     );
 }
 
