@@ -4,5 +4,19 @@
     background: aqua;
     align-items: center;
     grid-template-columns: 100px auto auto auto;
+    line-height: 0.7em;
+
 }
 
+.item2 {
+    text-decoration: none;
+}
+
+.item21 {
+    font-size: 25pt;
+}
+
+.item4 {
+    text-decoration: none;
+    color: #46adc4;
+}
