@@ -1,6 +1,5 @@
 .allbody {
     background: rgb(255, 255, 255);
-
 }
 
 .zagbody{
@@ -15,11 +14,47 @@
     padding-top: 30px;
     background: rgb(255, 255, 255);
     display: grid;
-    gap: 20px;
-    grid-template-columns: 20% 60% 20%;
+    grid-gap: 40px;
+    grid-template-columns: auto 60% auto;
 
 }
 
 .item1{
-    margin-left: 40px;
+    padding-left: 25px;
+    margin-left: 50px;
+    color: white;
+    text-transform:uppercase;
+}
+
+.item11{
+    margin-left: 32px;
+    margin-top: 30px;
+    color: #9f9f9f;
+    font-size: 15px;
+    text-transform:none;
+}
+
+.item3{
+    margin-right: 30px;
+}
+
+.d15 {
+    padding-bottom: 11px;
+    padding-top: 10px;
+    padding-right: 34px;
+    padding-left: 26px;
+    background: #aa0600;
+    position: relative;
+}
+.d15:after {
+    content: "";
+    margin-top: 17px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 20px;
+    left: 15%;
+    border-width: 0px 0px 15px 18px;
+    border-style: solid;
+    border-color: transparent #aa0600;
 }
