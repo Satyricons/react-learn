@@ -4,8 +4,10 @@
     column-gap: 10px;
     list-style-type: none;
     margin: 0px;
-    margin-left: 80px;
-    color: #d2d2d2;
+    margin-left: 60px;
+    color: #c0c0c0;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .li{
