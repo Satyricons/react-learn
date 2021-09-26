@@ -8,7 +8,7 @@ const Head = (props) => {
 
            <div>
                <NavLink to="/body">
-               <img src={logo}  alt="img"/>
+               <img className={headcss.item1} src={logo}  alt="img"/>
                </NavLink>
             </div>
 
@@ -20,8 +20,8 @@ const Head = (props) => {
            </div>
 
            <div>
-               <p className={headcss.item3}>225320 г.Барановичи, ул. Куйбышева, 46</p>
-               <p className={headcss.item3}>тел. +375 16 342-13-13</p>
+               <p className={headcss.item3}>225320 г. Барановичи, ул. Куйбышева, 46</p>
+               <p className={headcss.item3}>+375 16 342-13-13</p>
            </div>
 
            <div >

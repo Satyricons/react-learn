@@ -1,4 +1,5 @@
 import './App.css';
+import PreHead from "./components/prehead/prehead";
 import Head from "./components/head/head";
 import Body from "./components/body/body";
 import {BrowserRouter, Route} from "react-router-dom";
@@ -9,7 +10,9 @@ function App() {
       <BrowserRouter>
 
     <div className="App">
+        <PreHead />
         <Head id="Егор Каменски" />
+
         <Route path="/body" component={Body} />
         <Route path="/spisok/" component={Spisok} />
     </div>

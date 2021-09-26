@@ -1,0 +1,17 @@
+.ul{
+    display: grid;
+    grid-template-columns: 177px 146px 93px 126px auto;
+    column-gap: 10px;
+    list-style-type: none;
+    margin: 0px;
+    margin-left: 80px;
+    color: #e2e2e2;
+}
+
+.li{
+    align-items: center;
+}
+
+.allprehead{
+    background: #292929;
+}

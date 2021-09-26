@@ -1,14 +1,22 @@
 .allhead {
     display: grid;
     gap: 20px;
-    background: aqua;
+    background: rgba(0, 0, 0, 0.66);
     align-items: center;
     grid-template-columns: 100px auto auto auto;
-    grid-template-rows: auto;
+    grid-template-rows: 100px;
+    margin-bottom: 190px;
+}
+
+.item1{
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
 }
 
 .item2 {
     text-decoration: none;
+    color: #ffffff;
 }
 
 .item21 {
@@ -24,13 +32,14 @@
 }
 
 .item3 {
+    color: #ffffff;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .item4 {
     text-decoration: none;
-    color: #b0b0b0;
+    color: #9f9f9f;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -39,6 +48,7 @@
     }
 
 .item42{
+    color: #ffffff;
     margin-top: auto;
     margin-bottom: auto;
 }
