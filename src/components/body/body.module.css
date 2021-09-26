@@ -14,9 +14,8 @@
     padding-top: 30px;
     background: rgb(255, 255, 255);
     display: grid;
-    grid-gap: 40px;
-    grid-template-columns: auto 60% auto;
-
+    grid-gap: 70px;
+    grid-template-columns: 400px 55% auto;
 }
 
 .item1{
@@ -32,10 +31,13 @@
     color: #9f9f9f;
     font-size: 15px;
     text-transform:none;
+    line-height: 1.5;
 }
 
 .item3{
     margin-right: 30px;
+    color: #818181;
+    font-size: 14px;
 }
 
 .d15 {
@@ -57,4 +59,13 @@
     border-width: 0px 0px 15px 18px;
     border-style: solid;
     border-color: transparent #aa0600;
+}
+
+.img{
+    width: 58%;
+    margin: 0px auto;
+}
+
+.img2{
+    width: 20px;
 }

@@ -3,8 +3,8 @@
     gap: 20px;
     background: rgba(0, 0, 0, 0.66);
     align-items: center;
-    grid-template-columns: 100px auto auto auto;
-    grid-template-rows: 100px;
+    grid-template-columns: 80px 40% 40% 20%;
+    grid-template-rows: 120px;
     margin-bottom: 190px;
 }
 
@@ -38,16 +38,25 @@
 }
 
 .item4 {
+    align-items: center;
+}
+
+.item41{
     text-decoration: none;
     color: #9f9f9f;
     margin-top: auto;
     margin-bottom: auto;
 }
-.item4active {
+
+.item41active {
     color: #ff0000;
     }
 
 .item42{
+    width: 42px;
+}
+
+.item43{
     color: #ffffff;
     margin-top: auto;
     margin-bottom: auto;

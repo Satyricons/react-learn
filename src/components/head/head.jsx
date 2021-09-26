@@ -1,5 +1,6 @@
 import headcss from './head.module.css';
 import logo from './img/logo.png';
+import user from './img/user.png';
 import {NavLink} from "react-router-dom";
 
 const Head = (props) => {
@@ -24,9 +25,11 @@ const Head = (props) => {
                <p className={headcss.item3}>+375 16 342-13-13</p>
            </div>
 
-           <div >
-               <NavLink className={headcss.item4} activeClassName={headcss.item4active} to="/spisok">Войти</NavLink>
-               <p className={headcss.item42}>{props.id}</p>
+           <div className={headcss.item4}>
+
+               <img className={headcss.item42} src={user}  alt="img"/>
+               <div className={headcss.item43}>{props.id}</div>
+               <div><NavLink className={headcss.item41} activeClassName={headcss.item41active} to="/spisok">Выйти</NavLink></div>
            </div>
 
        </div>
