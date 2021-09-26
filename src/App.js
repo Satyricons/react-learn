@@ -2,7 +2,7 @@ import './App.css';
 import Head from "./components/head/head";
 import Body from "./components/body/body";
 import {BrowserRouter, Route} from "react-router-dom";
-import Sidebar from "./components/sidebar/sidebar";
+import Spisok from "./components/spisok/spisok";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
         <Head id="Егор Каменски" />
         <Route path="/body" component={Body} />
-        <Route path="/sidebar" component={Sidebar} />
+        <Route path="/spisok/" component={Spisok} />
     </div>
           </BrowserRouter>
   );
