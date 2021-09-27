@@ -1,4 +1,4 @@
-.ul{
+.ul {
     display: grid;
     grid-template-columns: 177px 146px 93px 126px auto;
     column-gap: 10px;
@@ -8,13 +8,25 @@
     color: #c0c0c0;
     padding-top: 5px;
     padding-bottom: 5px;
+
 }
 
-.li{
+.li {
     align-items: center;
+    text-decoration: none;
+    color: #9f9f9f;
 }
 
-.allprehead{
+.allprehead {
     background: #292929;
     font-size: 15px;
+
 }
+
+.item41{
+    text-decoration: none;
+    color: #9f9f9f;
+
+}
+
+
