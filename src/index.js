@@ -8,7 +8,7 @@ import state from "./redux/state";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App state={state} id={state.id} path={state.path} naz={state.naz} text={state.text}/>
+		<App state={state} path={state.bodyPage.path} naz={state.bodyPage.naz} text={state.bodyPage.text}/>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

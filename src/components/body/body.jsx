@@ -20,7 +20,7 @@ const Body = (props) => {
 					</div>
 
 				</div>
-				<div>{props.text}</div>
+				<div className={bodycss.item2}>{props.text}</div>
 				<div className={bodycss.item3}>
 					<div className={bodycss.img}><img src={userimg} alt="img"/></div>
 					<div>Лечащий врач: <b>Будько Н.А.</b></div>
