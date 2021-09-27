@@ -1,5 +1,5 @@
 import './App.css';
-import PreHead from "./components/prehead/prehead";
+import PreHead from "./components/menu/menu";
 import Head from "./components/head/head";
 import Body from "./components/body/body";
 import {BrowserRouter, Route} from "react-router-dom";
@@ -9,7 +9,7 @@ function App(props) {
 	return (
 		<BrowserRouter>
 			<div className="App">
-				<PreHead nameStat={props.nameStat} path={props.path}/>
+				<PreHead naz={props.naz} path={props.path}/>
 				<Head id={props.id}/>
 				<Route path="/spisok" component={Spisok}/>
 				<Route path={props.path[0]}> <Body naz={props.naz[0]} text={props.text[0]}/></Route>
