@@ -1,24 +1,21 @@
 import bodycss from './body.module.css';
 import userimg from './userimg/budko.jpg'
 import qee from './userimg/qee.png'
+import React from "react";
 
 const Body = (props) => {
+	let newPostElement = React.createRef();
 	return (
 		<div>
-
 			<div className={bodycss.zagbody}>{props.naz}</div>
-
 			<div className={bodycss.textbody}>
-
 				<div className={bodycss.item1}><b className={bodycss.d15}>Полезные статьи</b>
-
 					<div className={bodycss.item11}>
 						<div>Системы мониторинга</div>
 						<div>Питание</div>
 						<div>Как правильно считать каллории</div>
 						<div>Многое о многом</div>
 					</div>
-
 				</div>
 				<div className={bodycss.item2}>{props.text}</div>
 				<div className={bodycss.item3}>
@@ -29,11 +26,10 @@ const Body = (props) => {
 					<div>Инсулин 2: Новорапид (выдан: 20.08.2021, 1 шт.)</div>
 					<div>На прием к врачу: 30.09.2021</div>
 					<hr/>
-					<div>Мессенджер: <img className={bodycss.img2} src={qee} alt="img"/></div>
+					<div>Мессенджер: <img className={bodycss.img2} src={qee} alt="img" onClick={()=>{props.addPost(newPostElement.current.value);}}/></div>
+					<textarea ref={newPostElement}></textarea>
 				</div>
-
 			</div>
-
 		</div>
 	);
 }

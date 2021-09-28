@@ -15,7 +15,20 @@ let state = {
 		id: "Егор Каменски",
 		who: "mambers",
 		age: "39"
+	},
+	messagePage: {
+		posts: [
+			{id: 1, message: "Первое сообщение"},
+			{id: 2, message: "Второе сообщение"},
+			{id: 3, message: "Третье сообщение"}
+		]
 	}
 }
+
+export let addPost = (post) => {
+	let newPost = {id: state.messagePage.posts.length, message: post};
+	state.messagePage.posts.push(newPost);
+	console.log(state.messagePage.posts)
+};
 
 export default state
