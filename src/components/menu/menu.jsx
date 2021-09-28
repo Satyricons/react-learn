@@ -2,7 +2,7 @@ import menucss from "./menu.module.css"
 import MenuItem from "./menuItem";
 
 const Menu = (props) => {
-	let allSpisok = props.path.map((d, i) => <MenuItem key={i} path={props.path} naz={props.naz} id={i}/>);
+	let allSpisok = props.bodyPage.path.map((d, i) => <MenuItem key={i} path={props.bodyPage.path} naz={props.bodyPage.naz} id={i}/>);
 	return (
 		<div className={menucss.allprehead}>
 			<ul className={menucss.ul}>

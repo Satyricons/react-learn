@@ -28,7 +28,7 @@ const Head = (props) => {
            <div className={headcss.item4}>
 
                <img className={headcss.item42} src={user}  alt="img"/>
-               <div className={headcss.item43}>{props.id}</div>
+               <div className={headcss.item43}>{props.userPage.id}</div>
                <div><NavLink className={headcss.item41} activeClassName={headcss.item41active} to="/spisok">Выйти</NavLink></div>
            </div>
 
