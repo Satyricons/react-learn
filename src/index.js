@@ -6,11 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import state, {addPost} from "./redux/state";
 import {BrowserRouter} from "react-router-dom";
 
-ReactDOM.render(
-	<BrowserRouter>
-		<React.StrictMode>
-			<App state={state} addPost={addPost}/>
-		</React.StrictMode>
-	</BrowserRouter>, document.getElementById('root')
-);
-reportWebVitals();
+export let rerender=()=>{
+	ReactDOM.render(
+		<BrowserRouter>
+			<React.StrictMode>
+				<App state={state} addPost={addPost}/>
+			</React.StrictMode>
+		</BrowserRouter>, document.getElementById('root')
+	);
+	reportWebVitals();
+}
+
+rerender();

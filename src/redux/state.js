@@ -18,17 +18,16 @@ let state = {
 	},
 	messagePage: {
 		posts: [
-			{id: 1, message: "Первое сообщение"},
-			{id: 2, message: "Второе сообщение"},
-			{id: 3, message: "Третье сообщение"}
+			{id: 1, message: "Здравствуйте.", name:"Егор"},
+			{id: 2, message: "Я вас слушаю", name:"Елена"},
+			{id: 3, message: "По чем мухоморы продаете?", name:"Егор"}
 		]
 	}
 }
 
 export let addPost = (post) => {
-	let newPost = {id: state.messagePage.posts.length, message: post};
+	let newPost = {id: state.messagePage.posts.length + 1, message: post};
 	state.messagePage.posts.push(newPost);
-	console.log(state.messagePage.posts)
 };
 
 export default state

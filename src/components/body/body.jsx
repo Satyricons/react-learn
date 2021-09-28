@@ -2,9 +2,12 @@ import bodycss from './body.module.css';
 import userimg from './userimg/budko.jpg'
 import qee from './userimg/qee.png'
 import React from "react";
+import Message from "../spisok/Message";
 
 const Body = (props) => {
 	let newPostElement = React.createRef();
+	let allMessage = props.messagePage.posts.map((d, i) => <Message key={i}
+																	name={props.messagePage.posts[i].message}/>);
 	return (
 		<div>
 			<div className={bodycss.zagbody}>{props.naz}</div>
@@ -26,8 +29,11 @@ const Body = (props) => {
 					<div>Инсулин 2: Новорапид (выдан: 20.08.2021, 1 шт.)</div>
 					<div>На прием к врачу: 30.09.2021</div>
 					<hr/>
-					<div>Мессенджер: <img className={bodycss.img2} src={qee} alt="img" onClick={()=>{props.addPost(newPostElement.current.value);}}/></div>
+					<div>Мессенджер: <img className={bodycss.img2} src={qee} alt="img" onClick={() => {
+						props.addPost(newPostElement.current.value);
+					}}/></div>
 					<textarea ref={newPostElement}></textarea>
+					{allMessage}
 				</div>
 			</div>
 		</div>
