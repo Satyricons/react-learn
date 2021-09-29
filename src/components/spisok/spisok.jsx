@@ -10,9 +10,7 @@ let allSpisok = arrBd.map((d, i) => <User key={i} name={d.name} id={d.id}/>);
 
 const Spisok = () => {
 	return (
-		<div className={spisokcss.allspisok}>
-			{allSpisok}
-		</div>
+		<div className={spisokcss.allspisok}>{allSpisok}</div>
 	);
 }
 

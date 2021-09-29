@@ -3,11 +3,17 @@ import userimg from './userimg/budko.jpg'
 import qee from './userimg/qee.png'
 import React from "react";
 import Message from "../spisok/Message";
+import {addPostText} from "../../redux/state";
 
 const Body = (props) => {
 	let newPostElement = React.createRef();
 	let allMessage = props.messagePage.posts.map((d, i) => <Message key={i}
 																	name={props.messagePage.posts[i].message}/>);
+	let onPostChange = () => {
+		console.log(newPostElement.current.value);
+		addPostText(newPostElement.current.value)
+	}
+
 	return (
 		<div>
 			<div className={bodycss.zagbody}>{props.naz}</div>
@@ -32,7 +38,7 @@ const Body = (props) => {
 					<div>Мессенджер: <img className={bodycss.img2} src={qee} alt="img" onClick={() => {
 						props.addPost(newPostElement.current.value);
 					}}/></div>
-					<textarea ref={newPostElement}></textarea>
+					<textarea ref={newPostElement} value={props.messagePage.newPostText} onChange={onPostChange}/>
 					{allMessage}
 				</div>
 			</div>

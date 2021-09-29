@@ -13,6 +13,7 @@ const App = (props) => {
 																							naz={bodyPage.naz[i]}
 																							text={bodyPage.text[i]}
 																							addPost={props.addPost}
+																							addPostText={props.addPostText}
 																							messagePage={messagePage}
 																							/></Route>);
 	return (

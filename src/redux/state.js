@@ -1,3 +1,5 @@
+import {rerender} from "../rerender";
+
 let state = {
 	bodyPage: {
 		naz: ["Полезная информация", "Умные устройства", "Где купить", "Школа диабета", "Считаем углеводы"
@@ -18,16 +20,27 @@ let state = {
 	},
 	messagePage: {
 		posts: [
-			{id: 1, message: "Здравствуйте.", name:"Егор"},
-			{id: 2, message: "Я вас слушаю", name:"Елена"},
-			{id: 3, message: "По чем мухоморы продаете?", name:"Егор"}
-		]
+			{id: 1, message: "Здравствуйте.", name: "Егор"},
+			{id: 2, message: "Я вас слушаю", name: "Елена"},
+			{id: 3, message: "По чем мухоморы продаете?", name: "Егор"}
+		],
+		newPostText: ""
 	}
 }
 
-export let addPost = (post) => {
-	let newPost = {id: state.messagePage.posts.length + 1, message: post};
+export let addPost = () => {
+	let newPost = {id: state.messagePage.posts.length + 1, message: state.messagePage.newPostText};
 	state.messagePage.posts.push(newPost);
+	state.messagePage.newPostText='';
+	rerender(state)
+	console.log(state.messagePage.posts)
+
 };
+
+export let addPostText = (post) => {
+	state.messagePage.newPostText = (post);
+	rerender(state)
+};
+
 
 export default state
