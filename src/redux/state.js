@@ -1,4 +1,6 @@
-import {rerender} from "../rerender";
+let rerender = () => {
+	console.log("Меняю состояние")
+}
 
 let state = {
 	bodyPage: {
@@ -28,19 +30,22 @@ let state = {
 	}
 }
 
-export let addPost = () => {
+export const addPost = () => {
 	let newPost = {id: state.messagePage.posts.length + 1, message: state.messagePage.newPostText};
 	state.messagePage.posts.push(newPost);
-	state.messagePage.newPostText='';
-	rerender(state)
+	state.messagePage.newPostText = '';
+	rerender()
 	console.log(state.messagePage.posts)
 
 };
 
-export let addPostText = (post) => {
+export const addPostText = (post) => {
 	state.messagePage.newPostText = (post);
-	rerender(state)
+	rerender()
 };
 
+export const subscribe = (observer) => {
+	rerender = observer;
+}
 
 export default state
