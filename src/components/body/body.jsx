@@ -12,7 +12,6 @@ const Body = (props) => {
 	let onPostChange = () => {
 		console.log(newPostElement.current.value);
 		props.dispatch({type: "ADD_POST_TEXT", post: newPostElement.current.value});
-		// props.addPostText(newPostElement.current.value)
 	}
 
 	return (
@@ -37,8 +36,7 @@ const Body = (props) => {
 					<div>На прием к врачу: 30.09.2021</div>
 					<hr/>
 					<div>Мессенджер: <img className={bodycss.img2} src={qee} alt="img" onClick={() => {
-						// props.addPost(newPostElement.current.value);
-						props.dispatch({type:"ADD_POST"});
+						props.dispatch({type: "ADD_POST"});
 					}}/></div>
 					<textarea ref={newPostElement} value={props.messagePage.newPostText} onChange={onPostChange}/>
 					{allMessage}
