@@ -12,8 +12,7 @@ const App = (props) => {
 	let allSpisok = bodyPage.naz.map((d, i) => <Route key={i} path={bodyPage.path[i]}><Body key={i}
 																							naz={bodyPage.naz[i]}
 																							text={bodyPage.text[i]}
-																							addPost={props.addPost}
-																							addPostText={props.addPostText}
+																							dispatch={props.dispatch}
 																							messagePage={messagePage}
 	/></Route>);
 	return (

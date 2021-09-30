@@ -1,13 +1,7 @@
+const ADD_POST = "ADD_POST";
+const ADD_POST_TEXT = "ADD_POST_TEXT";
+
 const store = {
-
-	_callSubscribe() {
-		console.log("Нет подписчика!")
-	},
-
-	subscribe(observer) {
-		this._callSubscribe = observer;
-	},
-
 	_state: {
 		bodyPage: {
 			naz: ["Полезная информация", "Умные устройства", "Где купить", "Школа диабета", "Считаем углеводы"
@@ -35,30 +29,51 @@ const store = {
 			newPostText: ""
 		}
 	},
+	_callSubscribe() {
+		console.log("Нет подписчика!")
+	},
+	subscribe(observer) {
+		this._callSubscribe = observer;
+	},
 
 	getState() {
 		return this._state;
 	},
 
-	addPost() {
+	// addPost() {
+	//
+	// 	let newPost = {
+	// 		id: this._state.messagePage.posts.length + 1,
+	// 		message: this._state.messagePage.newPostText
+	// 	};
+	// 	this._state.messagePage.posts.push(newPost);
+	// 	this._state.messagePage.newPostText = '';
+	// 	this._callSubscribe(this._state);
+	// },
 
-		let newPost = {
-			id: this._state.messagePage.posts.length + 1,
-			message: this._state.messagePage.newPostText
-		};
-		this._state.messagePage.posts.push(newPost);
-		this._state.messagePage.newPostText = '';
-		this._callSubscribe(this._state);
-	},
+	// addPostText(post) {
+	// 	this._state.messagePage.newPostText = (post);
+	// 	this._callSubscribe(this._state);
+	// },
 
-	addPostText(post) {
-		this._state.messagePage.newPostText = (post);
-		this._callSubscribe(this._state);
-	},
+	dispatch(action) {
+		if (action.type === ADD_POST) {
+			let newPost = {
+				id: this._state.messagePage.posts.length + 1,
+				message: this._state.messagePage.newPostText
+			};
+			this._state.messagePage.posts.push(newPost);
+			this._state.messagePage.newPostText = '';
+			this._callSubscribe(this._state);
+		}
+		else if (action.type === ADD_POST_TEXT) {
 
+			this._state.messagePage.newPostText = action.post;
+			this._callSubscribe(this._state);
+		}
+	}
 
-
-}
+};
 
 
 export default store
