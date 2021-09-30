@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import state, {addPost, addPostText, subscribe} from "./redux/state";
+import {store} from "./redux/state";
 
 export let rerender = () => {
 	ReactDOM.render(
 		<BrowserRouter>
 			<React.StrictMode>
-				<App state={state} addPost={addPost} addPostText={addPostText}/>
+				<App state={store.getState()} addPost={store.addPost} addPostText={store.addPostText}/>
 			</React.StrictMode>
 		</BrowserRouter>, document.getElementById('root')
 	);
@@ -17,4 +17,4 @@ export let rerender = () => {
 }
 
 rerender();
-subscribe(rerender);
+store.subscribe(rerender);

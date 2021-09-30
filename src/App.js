@@ -15,7 +15,7 @@ const App = (props) => {
 																							addPost={props.addPost}
 																							addPostText={props.addPostText}
 																							messagePage={messagePage}
-																							/></Route>);
+	/></Route>);
 	return (
 		<div className="App">
 			<Menu bodyPage={bodyPage}/>

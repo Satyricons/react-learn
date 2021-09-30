@@ -3,7 +3,6 @@ import userimg from './userimg/budko.jpg'
 import qee from './userimg/qee.png'
 import React from "react";
 import Message from "../spisok/Message";
-import {addPostText} from "../../redux/state";
 
 const Body = (props) => {
 	let newPostElement = React.createRef();
@@ -11,7 +10,7 @@ const Body = (props) => {
 																	name={props.messagePage.posts[i].message}/>);
 	let onPostChange = () => {
 		console.log(newPostElement.current.value);
-		addPostText(newPostElement.current.value)
+		props.addPostText(newPostElement.current.value)
 	}
 
 	return (
