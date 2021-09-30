@@ -3,6 +3,7 @@ import userimg from './userimg/budko.jpg'
 import qee from './userimg/qee.png'
 import React from "react";
 import Message from "../spisok/Message";
+import {addPostActionCreator, updatePostTextActionCreator} from "../../redux/state";
 
 
 const Body = (props) => {
@@ -10,8 +11,7 @@ const Body = (props) => {
 	let allMessage = props.messagePage.posts.map((d, i) => <Message key={i}
 																	name={props.messagePage.posts[i].message}/>);
 	let onPostChange = () => {
-		console.log(newPostElement.current.value);
-		props.dispatch({type: "ADD_POST_TEXT", post: newPostElement.current.value});
+		props.dispatch(updatePostTextActionCreator(newPostElement.current.value));
 	}
 
 	return (
@@ -36,7 +36,7 @@ const Body = (props) => {
 					<div>На прием к врачу: 30.09.2021</div>
 					<hr/>
 					<div>Мессенджер: <img className={bodycss.img2} src={qee} alt="img" onClick={() => {
-						props.dispatch({type: "ADD_POST"});
+						props.dispatch(addPostActionCreator());
 					}}/></div>
 					<textarea ref={newPostElement} value={props.messagePage.newPostText} onChange={onPostChange}/>
 					{allMessage}
