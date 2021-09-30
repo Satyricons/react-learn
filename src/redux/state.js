@@ -1,10 +1,13 @@
-export let store = {
-	_subscriber() {
+const store = {
+
+	_callSubscribe() {
 		console.log("Нет подписчика!")
 	},
+
 	subscribe(observer) {
-		this._subscriber = observer;
+		this._callSubscribe = observer;
 	},
+
 	_state: {
 		bodyPage: {
 			naz: ["Полезная информация", "Умные устройства", "Где купить", "Школа диабета", "Считаем углеводы"
@@ -32,20 +35,30 @@ export let store = {
 			newPostText: ""
 		}
 	},
+
 	getState() {
 		return this._state;
 	},
-	addPostText(post) {
-		store.getState().messagePage.newPostText = (post);
-		store._subscriber();
-	},
+
 	addPost() {
+
 		let newPost = {
-			id: store.getState().messagePage.posts.length + 1,
-			message: store.getState().messagePage.newPostText
+			id: this._state.messagePage.posts.length + 1,
+			message: this._state.messagePage.newPostText
 		};
-		store.getState().messagePage.posts.push(newPost);
-		store.getState().messagePage.newPostText = '';
-		store._subscriber();
-	}
+		this._state.messagePage.posts.push(newPost);
+		this._state.messagePage.newPostText = '';
+		this._callSubscribe(this._state);
+	},
+
+	addPostText(post) {
+		this._state.messagePage.newPostText = (post);
+		this._callSubscribe(this._state);
+	},
+
+
+
 }
+
+
+export default store

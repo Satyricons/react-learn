@@ -10,6 +10,7 @@ const Body = (props) => {
 																	name={props.messagePage.posts[i].message}/>);
 	let onPostChange = () => {
 		console.log(newPostElement.current.value);
+
 		props.addPostText(newPostElement.current.value)
 	}
 
