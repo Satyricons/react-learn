@@ -1,13 +1,6 @@
-const ADD_POST = "ADD_POST";
-const UPD_POST_TEXT = "ADD_POST_TEXT";
+import AddPostReducer from "./addPostReducer";
 
-export const addPostActionCreator = () =>{
-	return({type:ADD_POST})
-}
 
-export const updatePostTextActionCreator = (text) =>{
-	return({type:UPD_POST_TEXT, post: text})
-}
 
 const store = {
 
@@ -51,22 +44,9 @@ const store = {
 		return this._state;
 	},
 
-
-
 	dispatch(action) {
-		if (action.type === ADD_POST) {
-			let newPost = {
-				id: this._state.messagePage.posts.length + 1,
-				message: this._state.messagePage.newPostText
-			};
-			this._state.messagePage.posts.push(newPost);
-			this._state.messagePage.newPostText = '';
-			this._callSubscribe(this._state);
-		}
-		else if (action.type === UPD_POST_TEXT) {
-			this._state.messagePage.newPostText = action.post;
-			this._callSubscribe(this._state);
-		}
+		AddPostReducer(this._state, action);
+		this._callSubscribe();
 	}
 };
 

@@ -3,7 +3,7 @@ import userimg from './userimg/budko.jpg'
 import qee from './userimg/qee.png'
 import React from "react";
 import Message from "../spisok/Message";
-import {addPostActionCreator, updatePostTextActionCreator} from "../../redux/state";
+import {addPostActionCreator, updatePostTextActionCreator} from "../../redux/addPostReducer";
 
 
 const Body = (props) => {
