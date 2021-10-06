@@ -1,22 +1,29 @@
 const ADD_POST = "ADD_POST";
 const UPD_POST_TEXT = "ADD_POST_TEXT";
 
-let AddPostReducer = (state, action) => {
+let inicialState = {posts: [
+		{id: 1, message: "Здравствуйте.", name: "Егор"},
+		{id: 2, message: "Я вас слушаю", name: "Елена"},
+		{id: 3, message: "По чем мухоморы продаете?", name: "Егор"}
+	], newPostText: ""}
+
+let AddPostReducer = (state = inicialState, action) => {
 	if (action.type === ADD_POST) {
 		let newPost = {
-			id: state.messagePage.posts.length + 1,
-			message: state.messagePage.newPostText
+			id: state.posts.length + 1,
+			message: state.newPostText,
+			name: "uknown"
 		};
-		state.messagePage.posts.push(newPost);
-		state.messagePage.newPostText = '';
+		state.posts.push(newPost);
+		state.newPostText = '';
 
 	} else if (action.type === UPD_POST_TEXT) {
-		state.messagePage.newPostText = action.post;
+		state.newPostText = action.post;
 
 	}
 	return state;
 }
 
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updatePostTextActionCreator = (text) => ({type: UPD_POST_TEXT, post: text})
+export const addPostActionCreator = () => ({type: ADD_POST});
+export const updatePostTextActionCreator = (text) => ({type: UPD_POST_TEXT, post: text});
 export default AddPostReducer;
