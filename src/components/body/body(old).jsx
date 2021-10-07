@@ -2,12 +2,17 @@ import bodycss from './body.module.css';
 import userimg from './userimg/budko.jpg'
 import qee from './userimg/qee.png'
 import React from "react";
+import Message from "../spisok/Message";
+import {addPostActionCreator, updatePostTextActionCreator} from "../../redux/addPostReducer";
 
-const Body = (props) => {
+
+const BodyOld = (props) => {
 	let newPostElement = React.createRef();
-
-	let onPostChange = () => props.updatePostTextActionCreator(newPostElement.current.value);
-	let onPostAdd = () => props.addPostActionCreator();
+	let allMessage = props.messagePage.posts.map((d, i) => <Message key={i}
+																	name={props.messagePage.posts[i].message}/>);
+	let onPostChange = () => {
+		props.dispatch(updatePostTextActionCreator(newPostElement.current.value));
+	}
 
 	return (
 		<div>
@@ -30,13 +35,15 @@ const Body = (props) => {
 					<div>Инсулин 2: Новорапид (выдан: 20.08.2021, 1 шт.)</div>
 					<div>На прием к врачу: 30.09.2021</div>
 					<hr/>
-					<div>Мессенджер: <img className={bodycss.img2} src={qee} alt="img" onClick={onPostAdd}/></div>
-					<textarea ref={newPostElement} value={props.simvol} onChange={onPostChange}/>
-					{props.allMessage}
+					<div>Мессенджер: <img className={bodycss.img2} src={qee} alt="img" onClick={() => {
+						props.dispatch(addPostActionCreator());
+					}}/></div>
+					<textarea ref={newPostElement} value={props.messagePage.newPostText} onChange={onPostChange}/>
+					{allMessage}
 				</div>
 			</div>
 		</div>
 	);
 }
 
-export default Body;
+export default BodyOld;

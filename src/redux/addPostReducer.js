@@ -8,7 +8,10 @@ let inicialState = {posts: [
 	], newPostText: ""}
 
 let AddPostReducer = (state = inicialState, action) => {
+
 	if (action.type === ADD_POST) {
+		console.log("Произведена запись нового сообщения")
+
 		let newPost = {
 			id: state.posts.length + 1,
 			message: state.newPostText,
@@ -18,8 +21,9 @@ let AddPostReducer = (state = inicialState, action) => {
 		state.newPostText = '';
 
 	} else if (action.type === UPD_POST_TEXT) {
+		console.log(action.type === UPD_POST_TEXT)
 		state.newPostText = action.post;
-
+console.log(state.newPostText)
 	}
 	return state;
 }
