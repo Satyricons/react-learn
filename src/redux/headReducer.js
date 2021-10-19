@@ -4,7 +4,7 @@ let inicialState = {
 	age: "39"
 }
 
-let UserReducer = (state = inicialState, action) => {
+let HeadReducer = (state = inicialState, action) => {
 	if (action.type === 1) {
 	}
 	else if (action.type === 2) {
@@ -12,4 +12,4 @@ let UserReducer = (state = inicialState, action) => {
 	return state;
 }
 
-export default UserReducer;
+export default HeadReducer;
