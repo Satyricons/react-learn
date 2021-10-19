@@ -4,7 +4,6 @@ import {addPostActionCreator, updatePostTextActionCreator} from "../../redux/add
 import Message from "../spisok/Message";
 import {connect} from "react-redux";
 
-
 let mapStateToProps = (state) =>{
 	return {
 		naz: state.bodyPage.naz[0],
