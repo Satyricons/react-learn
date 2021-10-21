@@ -8,7 +8,7 @@ let inicialState = {
 	path: ["/stat1", "/stat2", "/stat3", "/stat4", "/stat5"],
 }
 
-let menuReducer = (state = inicialState, action) => {
+let MenuReducer = (state = inicialState, action) => {
 	if (action.type === 1) {
 		return {};
 	} else if (action.type === 2) {
@@ -18,4 +18,4 @@ let menuReducer = (state = inicialState, action) => {
 }
 
 
-export default menuReducer;
+export default MenuReducer;

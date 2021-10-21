@@ -1,7 +1,7 @@
 import React from "react";
 import Body from "./body";
 import {addPostActionCreator, updatePostTextActionCreator} from "../../redux/addPostReducer";
-import Message from "../spisok/Message";
+import Message from "./message";
 import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
