@@ -3,20 +3,22 @@
     gap: 20px;
     background: rgba(0, 0, 0, 0.66);
     align-items: center;
-    grid-template-columns: 80px 40% 40% 20%;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: 120px;
-    margin-bottom: 190px;
+    /*margin-bottom: 252px;*/
 }
 
 .item1{
     width: 60px;
     height: 60px;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .item2 {
     text-decoration: none;
     color: #ffffff;
+    display: flex
 }
 
 .item21 {

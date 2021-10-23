@@ -7,19 +7,15 @@ import React from "react";
 const Head = (props) => {
 	return (
 		<div className={headcss.allhead}>
-			<div>
-				<NavLink to="/body">
+			<NavLink className={headcss.item2} to="/body">
+				<div>
 					<img className={headcss.item1} src={logo} alt="img"/>
-				</NavLink>
-			</div>
-
-			<div>
-				<NavLink className={headcss.item2} to="/body">
+				</div>
+				<div>
 					<p className={headcss.item21}><b>Эндокринология для всех</b></p>
 					<p className={headcss.item22}>Барановичская детская городская поликлиника</p>
-				</NavLink>
-			</div>
-
+				</div>
+			</NavLink>
 			<div>
 				<p className={headcss.item3}>225320 г.Барановичи, ул.Куйбышева, 46</p>
 				<p className={headcss.item3}>+375 16 342-13-13</p>

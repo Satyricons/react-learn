@@ -1,3 +1,5 @@
 .allspisok {
-    background: rgba(64, 146, 176, 0.54);
+    background-image: url(./img/fon.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
 }

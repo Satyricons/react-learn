@@ -1,32 +1,25 @@
-.ul {
-    display: grid;
-    grid-template-columns: 177px 146px 93px 126px auto;
-    column-gap: 10px;
-    list-style-type: none;
-    margin: 0px;
-    margin-left: 60px;
-    color: #c0c0c0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-}
-
-.li {
-    align-items: center;
-    text-decoration: none;
-    color: #9f9f9f;
-}
-
-.allprehead {
+.allmenu {
     background: #292929;
     font-size: 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.ul {
+    margin: 0px;
+    margin-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+li {
+    display: inline;
+    margin-right: 35px;
 }
 
 .item41{
     text-decoration: none;
     color: #9f9f9f;
-
 }
-
-

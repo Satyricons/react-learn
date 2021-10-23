@@ -4,6 +4,7 @@ import qee from './userimg/qee.png'
 import React from "react";
 
 const Body = (props) => {
+
 	let newPostElement = React.createRef();
 
 	let onPostChange = () => props.updatePostTextActionCreator(newPostElement.current.value);
