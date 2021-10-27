@@ -6,7 +6,6 @@ import HeadContainer from "./components/head/headContainer";
 import UsersContainer from "./components/users/usersContainer";
 
 const App = () => {
-
 	return (
 		<div className="App">
 			<MenuContainer/>
