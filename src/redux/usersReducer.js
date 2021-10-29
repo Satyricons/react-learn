@@ -37,17 +37,17 @@ let UsersReducer = (state = inicialState, action) => {
 		case SET_USERS:
 			return {
 				...state,
-				users: [...action.users]
+				users: action.users
 			}
 		case SET_COUNT_PAGE:
 			return{
 				...state,
-				countPage: action.countUsers,
+				countPage: action.countUsers
 			}
 		case SET_CURRENT_PAGE:
 			return{
 				...state,
-				currentPage: action.currentPage,
+				currentPage: action.currentPage
 			}
 		default:
 			return state;
