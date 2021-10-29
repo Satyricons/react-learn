@@ -9,9 +9,7 @@ const Users = (props) => {
 
 	return (
 		<div className={userscss.allspisok}>
-			{pages.map(p => {
-				return <button key={p} onClick={() => props.onClickButtonPage(p)}>{p}</button>
-			})}
+			{pages.map(p => <button key={p} onClick={() => props.onClickButtonPage(p)}>{p}</button>)}
 			{props.users.map(u => <div key={u.id}>
 				{u.id + " " + u.name + " "} {u.follow ?
 				<button onClick={() => props.onClickButtonUnFollow(u)}>Отменить подписку</button> :

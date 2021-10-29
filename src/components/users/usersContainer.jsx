@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import {changeFolowAC, changeUnFolowAC, setCountPageAC, setUsersAC, setCurrentPageAC} from "../../redux/usersReducer";
+import {changeFollowAC, changeUnFollowAC, setCountPageAC, setUsersAC, setCurrentPageAC} from "../../redux/usersReducer";
 import React from "react";
 import axios from "axios";
 import Users from "./users";
@@ -25,11 +25,11 @@ class UsersApiComponent extends React.Component {
 	}
 
 	onClickButtonFollow = (u) => {
-		axios.put(`http://localhost:8000/users/${u.id}`, {follow: true}).then(() => this.props.changeFolow(u.id));
+		axios.put(`http://localhost:8000/users/${u.id}`, {follow: true}).then(() => this.props.changeFollow(u.id));
 	}
 
 	onClickButtonUnFollow = (u) => {
-		axios.put(`http://localhost:8000/users/${u.id}`, {follow: false}).then(() => this.props.changeUnFolow(u.id));
+		axios.put(`http://localhost:8000/users/${u.id}`, {follow: false}).then(() => this.props.changeUnFollow(u.id));
 	}
 
 	render = () => <Users
@@ -37,8 +37,8 @@ class UsersApiComponent extends React.Component {
 		users={this.props.users}
 		setCurrentPage={this.props.setCurrentPage}
 		setUsers={this.props.setUsers}
-		changeUnFolow={this.props.changeUnFolow}
-		changeFolow={this.props.changeFolow}
+		changeUnFollow={this.props.changeUnFollow}
+		changeFollow={this.props.changeFollow}
 		onClickButtonPage={this.onClickButtonPage}
 		onClickButtonFollow={this.onClickButtonFollow}
 		onClickButtonUnFollow={this.onClickButtonUnFollow}
@@ -55,11 +55,11 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
 	return {
-		changeFolow: (followId) => {
-			dispatch(changeFolowAC(followId))
+		changeFollow: (followId) => {
+			dispatch(changeFollowAC(followId))
 		},
-		changeUnFolow: (followId) => {
-			dispatch(changeUnFolowAC(followId))
+		changeUnFollow: (followId) => {
+			dispatch(changeUnFollowAC(followId))
 		},
 		setUsers: (users) => {
 			dispatch(setUsersAC(users))

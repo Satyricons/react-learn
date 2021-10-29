@@ -54,8 +54,8 @@ let UsersReducer = (state = inicialState, action) => {
 	}
 }
 export const setCountPageAC = (countUsers) => ({type: SET_COUNT_PAGE, countUsers});
-export const changeFolowAC = (followId) => ({type: CHANGE, followId});
-export const changeUnFolowAC = (followId) => ({type: UN_CHANGE, followId});
+export const changeFollowAC = (followId) => ({type: CHANGE, followId});
+export const changeUnFollowAC = (followId) => ({type: UN_CHANGE, followId});
 export const setUsersAC = (users) => ({type: SET_USERS, users});
 export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
 
