@@ -3,11 +3,13 @@ const UN_CHANGE = "UN_CHANGE";
 const SET_USERS = "SET_USERS";
 const SET_COUNT_PAGE = "SET_COUNT_PAGE";
 const SET_CURRENT_PAGE ="SET_CURRENT_PAGE";
+const IS_FETCHING = "IS_FETCHING"
 
 let inicialState = {
 	users: [],
 	countPage: 0,
 	currentPage: 1,
+	isFetching: true,
 }
 
 let UsersReducer = (state = inicialState, action) => {
@@ -49,14 +51,21 @@ let UsersReducer = (state = inicialState, action) => {
 				...state,
 				currentPage: action.currentPage
 			}
+		case IS_FETCHING:
+			return{
+				...state,
+				isFetching: action.isFetching
+			}
 		default:
 			return state;
 	}
 }
-export const setCountPageAC = (countUsers) => ({type: SET_COUNT_PAGE, countUsers});
-export const changeFollowAC = (followId) => ({type: CHANGE, followId});
-export const changeUnFollowAC = (followId) => ({type: UN_CHANGE, followId});
-export const setUsersAC = (users) => ({type: SET_USERS, users});
-export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
+
+export const setCountPage = (countUsers) => ({type: SET_COUNT_PAGE, countUsers});
+export const changeFollow = (followId) => ({type: CHANGE, followId});
+export const changeUnFollow = (followId) => ({type: UN_CHANGE, followId});
+export const setUsers = (users) => ({type: SET_USERS, users});
+export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
+export const changeFetching = (isFetching) => ({type: IS_FETCHING, isFetching})
 
 export default UsersReducer;

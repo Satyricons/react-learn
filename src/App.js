@@ -11,7 +11,7 @@ const App = () => {
 			<MenuContainer/>
 			<HeadContainer/>
 			<Route path="/spisok" render={() => <UsersContainer/>}/>
-			<Route path={"/body"} render={() => <BodyContainer/>}/>
+			<Route path={"/body/:userId"} render={() => <BodyContainer/>}/>
 		</div>
 	);
 }

@@ -1,7 +1,4 @@
 .App{
-    background-image: url(./img/back.png);
-    /*background-size:cover;*/
+    background-image: url(./img/back.jpg);
     background-repeat: no-repeat;
-    /*grid-template-rows: 300px 200px 100px;*/
-
 }

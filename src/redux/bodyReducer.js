@@ -1,13 +1,34 @@
+const SET_USER_URL = "SET_USER_URL";
+const SET_USER_NAME = "SET_USER_NAME"
+
 let inicialState = {
-	naz: ["Заголовок основной страницы"],
-	text: ["Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. Здесь будет текст основной страницы. "]
+	naz: ["Данные пользователя"],
+	userUrl: null,
+	userName:""
 }
 
 let BodyReducer = (state = inicialState, action) => {
-	if (action.type === 1) {
-	} else if (action.type === 2) {
+
+	switch (action.type) {
+
+		case SET_USER_URL:
+			return {
+				...state,
+				userUrl: action.userUrl
+			}
+		case SET_USER_NAME:
+			return {
+				...state,
+				userName: action.userName
+			}
+
+		default:
+			return state;
 	}
-	return state;
 }
+
+export const setUserUrl = (userUrl) => ({type: SET_USER_URL, userUrl});
+
+export const setUserName = (userName) => ({type: SET_USER_NAME, userName});
 
 export default BodyReducer;
