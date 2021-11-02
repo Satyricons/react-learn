@@ -9,7 +9,6 @@
     font-weight: bold;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
-    /*margin-top: -51px;*/
     padding-top: 200px;
 }
 
@@ -38,13 +37,23 @@
 }
 
 .item2 {
+    display: inline-flex;
+}
 
+.item22{
+    margin-left: 30px;
 }
 
 .item3 {
     margin-right: 30px;
     color: #818181;
     font-size: 14px;
+}
+.item31{
+
+    border: 1px double rgba(0, 0, 0, 0.38);
+    overflow: auto;
+    height: 100%;
 }
 
 .d15 {
@@ -70,10 +79,13 @@
 }
 
 .img {
-    width: 58%;
-    margin: 0px auto;
+    width: 280px;
 }
 
 .img2 {
     width: 20px;
+}
+
+.textarea{
+
 }

@@ -1,5 +1,19 @@
 .allspisok {
-    background-image: url(./img/fon.jpg);
-    background-size:cover;
+    background-color: white;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+.selected {
+    font-weight: 700;
+}
+
+.preloader {
+    width: 100px;
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
 }
