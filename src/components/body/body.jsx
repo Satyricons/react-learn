@@ -5,7 +5,7 @@ import React from "react";
 
 const Body = (props) => {
 
-	// console.log(props)
+	console.log(props)
 
 	const onKeyDown = e => {
 		if (e.code === "Enter") {
