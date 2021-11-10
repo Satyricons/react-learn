@@ -1,19 +1,15 @@
-import './App.css';
-import {Route} from "react-router-dom";
-import BodyContainer from "./components/body/bodyContainer";
-import MenuContainer from "./components/menu/menuContainer";
-import HeadContainer from "./components/head/headContainer";
-import UsersContainer from "./components/users/usersContainer";
+import {Route} from "react-router-dom"
+import Body from "./components/body/body"
+import Menu from "./components/menu/menu"
+import Header from "./components/head/header"
+
 
 const App = () => {
-	return (
-		<div className="App">
-			<MenuContainer/>
-			<HeadContainer/>
-			<Route path="/spisok" render={() => <UsersContainer/>}/>
-			<Route path={"/body/:userId"} render={() => <BodyContainer/>}/>
-		</div>
-	);
+	return <>
+		<Menu/>
+		<Header/>
+		<Route path={"/stat1"} render={() => <Body/>}/>
+	</>
 }
 
-export default App;
+export default App
