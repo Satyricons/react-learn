@@ -112,3 +112,16 @@
     cursor: grabbing;
 }
 
+
+.buttonSearch{
+    width: 10px;
+    height: 10px;
+    opacity: 0.6;
+    margin-left: 10px;
+}
+.buttonSearch:hover{
+
+    opacity: 0.6;
+    margin-left: 10px;
+    cursor: pointer;
+}
