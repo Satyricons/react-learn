@@ -51,7 +51,7 @@ const Users = (props) => {
 //скролл вниз
 			if (el) el.current.scrollTop = el.current.scrollHeight
 
-//отправляем на сервер сигнал сообщение
+//отправляем на сервер сигнал сообщения
 			socket.emit("msgToServer", {toUser: clickUser, fromUser: props.authorizeId, msg: symbol})
 		})
 	}
