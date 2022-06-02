@@ -36,7 +36,7 @@ const AuthLogin = (props) => {
 			:
 			<div>
 				<h1>Регистрация</h1>
-				<p>Email:</p>
+				<p>E-mail:</p>
 				<p><input ref={email} type="text"/></p>
 				<p>Password:</p>
 				<p><input ref={password} type="text"/></p>
