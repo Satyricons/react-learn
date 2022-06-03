@@ -10,6 +10,7 @@ const getAllMessage = (user, parseUser, list = 1) => {
 //список сообщений авторизированного пользователя:
 	user.allmessage.map(u => {
 		if (u.fromId === parseUser.id) {
+			// console.log(u)
 			messages.push(u)
 		}
 	})
