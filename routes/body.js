@@ -152,6 +152,7 @@ bodyRout.post('/users', passport.authenticate('jwt', {session: false}), async (r
 	let searchUsers = req.body.searchUsers
 	let users = await User.find()
 	let newUsers = []
+//поиск в имени символов
 	users.map(u => {
 		if (searchUsers.toLowerCase() === u.name.substring(0, searchUsers.length).toLowerCase()) {
 			newUsers.push({
